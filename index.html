@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore Inventory System</title>
+    <!-- Add your CSS link here -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Bookstore</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Inventory Search</a></li>
+                <li><a href="#">Browse by Category</a></li>
+                <li><a href="#">New Arrivals</a></li>
+                <li><a href="#">Bestsellers</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        <h2>Inventory Search</h2>
+        <form>
+            <input type="text" placeholder="Search by title, author, ISBN...">
+            <select>
+                <option value="">Select Genre</option>
+                <option value="fiction">Fiction</option>
+                <option value="nonfiction">Non-Fiction</option>
+                <!-- Add more genre options -->
+            </select>
+            <button type="submit">Search</button>
+        </form>
+        <!-- Display search results here -->
+
+        <h2>Browse by Category</h2>
+        <!-- List of book genres as buttons -->
+        <div class="categories">
+            <button class="category">Fiction</button>
+            <button class="category">Non-Fiction</button>
+            <!-- Add more genre buttons -->
+        </div>
+
+        <h2>New Arrivals</h2>
+        <!-- Showcase new books with buttons -->
+        <div class="book-list">
+            <div class="book">
+                <img src="book1.jpg" alt="Book 1">
+                <h3>Book Title</h3>
+                <p>Author Name</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Add more book cards -->
+        </div>
+
+        <h2>Bestsellers</h2>
+        <!-- Showcase best-selling books with buttons -->
+        <div class="book-list">
+            <div class="book">
+                <img src="book2.jpg" alt="Book 2">
+                <h3>Book Title</h3>
+                <p>Author Name</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Add more book cards -->
+        </div>
+    </section>
+
+    <!-- Other sections and footer remain the same -->
+</body>
+</html>
