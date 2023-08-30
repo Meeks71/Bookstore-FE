@@ -1,74 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookstore Inventory System</title>
-    <!-- Add your CSS link here --><link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to Vanguard Books</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Inventory Search</a></li>
-                <li><a href="#">Browse by Category</a></li>
-                <li><a href="#">New Arrivals</a></li>
-                <li><a href="#">Bestsellers</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
+<h1>Vanguard Inventory Management System(VIMS)</h1>
 
-    <section class="content">
-        <h2>Inventory Search</h2>
-        <form>
-            <input type="text" placeholder="Search by title, author, ISBN...">
-            <select>
-                <option value="">Select Genre</option>
-                <option value="fiction">Fiction</option>
-                <option value="nonfiction">Non-Fiction</option>
-                <!-- Add more genre options -->
-            </select>
-            <button type="submit">Search</button>
-        </form>
-        <!-- Display search results here -->
+<!-- List Warehouses -->
+<h2>Warehouses List</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <!-- Add more columns as needed -->
+        <th>Actions</th>
+    </tr>
+    <!-- Loop through warehouses and populate the table rows -->
+    <!-- Replace with Thymeleaf or other template engine syntax if using -->
+    <!-- This is a basic example using plain HTML -->
+    <tr>
+        <td>1</td>
+        <td>Warehouse 1</td>
+        <!-- Add more columns as needed -->
+        <td>
+            <button>Edit</button>
+            <button>Delete</button>
+        </td>
+    </tr>
+</table>
 
-        <h2>Browse by Category</h2>
-        <!-- List of book genres as buttons -->
-        <div class="categories">
-            <button class="category">Fiction</button>
-            <button class="category">Non-Fiction</button>
-            <!-- Add more genre buttons -->
-        </div>
+<!-- Add Warehouse Form -->
+<h2>Add Warehouse</h2>
+<form action="/warehouses/add" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <!-- Add more input fields as needed -->
+    <button type="submit">Add Warehouse</button>
+</form>
 
-        <h2>New Arrivals</h2>
-        <!-- Showcase new books with buttons -->
-        <div class="book-list">
-            <div class="book">
-                <img src="book1.jpg" alt="Book 1">
-                <h3>Book Title</h3>
-                <p>Author Name</p>
-                <button>Add to Cart</button>
-            </div>
-            <!-- Add more book cards -->
-        </div>
+<!-- Edit Warehouse Form -->
+<h2>Edit Warehouse</h2>
+<form action="/warehouses/edit" method="post">
+    <input type="hidden" id="editId" name="id">
+    <label for="editName">Name:</label>
+    <input type="text" id="editName" name="name" required>
+    <!-- Add more input fields as needed -->
+    <button type="submit">Save Changes</button>
+</form>
 
-        <h2>Bestsellers</h2>
-        <!-- Showcase best-selling books with buttons -->
-        <div class="book-list">
-            <div class="book">
-                <img src="book2.jpg" alt="Book 2">
-                <h3>Book Title</h3>
-                <p>Author Name</p>
-                <button>Add to Cart</button>
-            </div>
-            <!-- Add more book cards -->
-        </div>
-    </section>
+<script>
+    // JavaScript logic to populate edit form and handle actions
+    // You can use JavaScript or a front-end framework for this
+</script>
 
-    <!-- Other sections and footer remain the same -->
 </body>
 </html>
